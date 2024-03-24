@@ -69,7 +69,7 @@ with sync_playwright() as p:
      category_links.extend(extract_links(page.content()))
 
     page = context.new_page()
-    for link in category_links[2230:] : 
+    for link in category_links : 
         scrape_category(page, link)
 
     save_cookies(context, "cookies.json")
